@@ -9,6 +9,8 @@ public class Main {
         try {
             UserRepository rep = new UserRepository("https://jsonplaceholder.typicode.com/users");
             System.out.println(rep);
+            System.out.println(rep.getSubStringsIndexes("\"id\""));
+            System.out.println(rep.countBrakets());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
