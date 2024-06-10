@@ -46,7 +46,7 @@ public class UserRepository {
      * сколько раз он встречается в строке-поля класса,
      * вернув результат в виде HashMap<Character, Integer>
      */
-    public HashMap<Character, Integer> countBrakets() {
+    public HashMap<Character, Integer> countBrackets() {
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('{', 0);
         map.put('}', 0);
