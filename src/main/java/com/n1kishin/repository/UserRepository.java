@@ -33,10 +33,10 @@ public class UserRepository {
      */
     public ArrayList<Integer> getSubStringsIndexes(String subString) {
         ArrayList<Integer> res = new ArrayList<>();
-        int currentIndex = 0;
-        while ((currentIndex = this.httpAnswer.indexOf(subString, currentIndex)) != -1) {
+        int currentIndex = this.httpAnswer.indexOf(subString);
+        while (currentIndex  != -1) {
             res.add(currentIndex);
-            currentIndex += 1;
+            currentIndex = this.httpAnswer.indexOf(subString, currentIndex + 1);
         }
         return res;
     }
